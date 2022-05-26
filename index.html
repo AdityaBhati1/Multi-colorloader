@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background: #090909;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 96vh;
+
+		}
+		.up{
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background: linear-gradient(270deg,#00ffff,transparent,transparent);
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			animation:ok 40s linear infinite;
+		}
+		@keyframes ok{
+			100%{
+				 transform: rotate(6000deg);
+				 filter: hue-rotate(3600deg);
+			}
+		}
+		.up::before{
+			content: '';
+			position: absolute;
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			top: -1;
+			background: #090909;
+		}
+		.up::after{
+			content: '';
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			top: 270px;
+			background: #fff;
+			box-shadow: 0 0 10px #00ffff,
+			0 0 20px #00ffff,
+			0 0 40px #00ffff,
+			0 0 80px #00ffff,
+			0 0 160px #00ffff;
+		}
+
+	</style>
+</head>
+<body>
+<div class="up"></div>
+</body>
+</html>
